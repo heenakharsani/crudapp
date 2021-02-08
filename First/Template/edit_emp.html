@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" name="f1" action="/update/{{e.eid}}">
+    {% csrf_token %}
+
+    <table>
+        <tr>
+            <td>Enter Name :</td>
+            <td> <input type="text" name="ename" value="{{e.ename}}"></td>
+        </tr>
+        <tr>
+            <td>Enter Email :</td>
+            <td> <input type="text" name="eemail" value="{{e.eemail}}"></td>
+        </tr>
+        <tr>
+            <td>Enter Contact :</td>
+            <td> <input type="text" name="econtact" value="{{e.econtact}}"></td>
+        </tr>
+        <tr>
+            <td> <input type="submit" value="Update"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

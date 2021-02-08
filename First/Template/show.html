@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+   <table border="1" height="200" width="300">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Action</th>
+        </tr>
+        {% for val in e %}
+        <tr>
+            <td>{{val.eid}}</td>
+            <td>{{val.ename}}</td>
+            <td>{{val.eemail}}</td>
+            <td>{{val.econtact}}</td>
+            <td>
+                <a href="/delete/{{val.eid}}">delete</a>
+                <a href="/edit/{{val.eid}}">Update</a>
+            </td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
